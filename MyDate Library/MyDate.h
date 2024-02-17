@@ -1,8 +1,6 @@
 /*
-    Date Library ^_^ ...
-
-    BY Hamza Abdulrahman
-    Date : 2024-2-7
+    Author	=> Hamza Abdulrahman
+    Date	=> 2024-2-17
 */
 #pragma once
 #pragma warning(default : 4996)
@@ -53,6 +51,34 @@ public:
         _Month = Date._Month;
         _Year = Date._Year;
     }
+
+    void setYear(int Year)
+    {
+        _Year = Year;
+    }
+    int getYear() {
+        return _Year;
+    }
+    __declspec(property(get = getYear, put = setYear)) int Year;
+    void setMonth(int Month)
+    {
+        _Month = Month;
+    }
+    int getMonth()
+    {
+        return _Month;
+    }
+    __declspec(property(get = getMonth, put = setMonth)) int Month;
+    void setDay(int Day)
+    {
+        _Day = Day;
+    }
+    int getDay()
+    {
+        return Day;
+    }
+    __declspec(property(get = getDay, put = setDay)) int Day;
+
     void Print()
     {
         cout << _Day << "/" << _Month << "/" << _Year << endl;
